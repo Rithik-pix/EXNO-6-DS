@@ -128,36 +128,41 @@ plt.xlabel('Total Bill')
 plt.ylabel("Tip Amount")
 plt.title('Scatter Plot of Total Bill vs. Tip Amount')
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/6809b914-41c7-4509-b26d-5b36394467e9)
+![image](https://github.com/user-attachments/assets/fae01197-4b68-4290-a988-18ea1616bfd0)
+
 
 ```
 num_var = np.random.randn(1000)
 num_var=pd.Series(num_var, name = "Numerical variable")
 num_var
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/0fd6af5d-13f2-44bc-8c51-3fac53c2659a)
+![image](https://github.com/user-attachments/assets/12422c20-0994-43df-bdbc-75980e74c8d7)
+
 
 ```
 sns.histplot(data = num_var, kde = True)
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/02db6aff-b4e2-4e81-837c-c004f553eb1c)
+!![image](https://github.com/user-attachments/assets/3d92a17c-fbbc-4b26-84d5-586ecd197931)
+
 
 ```
 df=pd.read_csv("titanic_dataset.csv")
 sns.histplot(data=df,x="Pclass", hue="Survived", kde=True)
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/7a687d37-9f63-4b80-adb6-8bb44298a29d)
+![image](https://github.com/user-attachments/assets/9fa4b18a-2446-4b0e-82b1-b9687cdd9c18)
+
 
 ```
 tips=sns.load_dataset('tips')
 sns.boxplot(x=tips['day'], y=tips ['total_bill'], hue=tips['sex'])
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/f1b68368-fc5a-4388-9ab3-6035ca1bc068)
+![image](https://github.com/user-attachments/assets/bc1f68cc-01b0-4f17-843c-776595f697d4)
+
 ```
 sns.boxplot(x="day", y="total_bill", hue="smoker", data=tips, linewidth=2, width=0.6, boxprops={"facecolor": "lightblue", "edgecolor": "darkblue"},
 whiskerprops={"color": "black", "linestyle": "--", "linewidth": 1.5}, capprops={"color": "black", "linestyle": "--", "linewidth": 1.5})
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/e9e19e0a-f814-4a18-92d0-c5f863d4917a)
+![image](https://github.com/user-attachments/assets/8927dd3e-81cd-4d90-baca-46207b621a24)
 
 ```
 sns.violinplot(x="day", y="total_bill", hue="smoker", data=tips, linewidth=2, width=0.6, palette="Set3", inner="quartile")
@@ -165,55 +170,63 @@ plt.xlabel("Day of the Week")
 plt.ylabel("Total Bill")
 plt.title("Violin Plot of Total Bill by Day and Smoker Status")
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/1a5f08c3-da33-4dc2-be18-34818d3e1639)
+![image](https://github.com/user-attachments/assets/fe89a9dd-a4ac-4824-a870-181269b948b0)
+
 
 ```
 mart=pd.read_csv("titanic_dataset.csv")
 mart
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/55e69a20-c26f-4d0d-98a1-74a74f677321)
+![image](https://github.com/user-attachments/assets/9521c1fa-a18d-4e47-86f1-02d6878b8169)
+
 ```
 mart=mart[['PassengerId', 'Survived', 'Age', 'Name', 'Ticket', 'Embarked']] 
 mart.head(10)
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/f2d68a01-a292-465b-a014-b486057df114)
+![image](https://github.com/user-attachments/assets/4335ecbf-ad6b-4bf2-9d29-5ce934d7953d)
+
 
 ```
 sns.kdeplot(data=mart,x='PassengerId')
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/6a81ae93-2e25-4324-96fc-e82ab3bb9191)
+![image](https://github.com/user-attachments/assets/67b91084-55af-4b51-b39f-721cf5709d75)
+
 
 ```
 sns.kdeplot(data=mart,x='Age')
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/5810ee99-74bb-42d1-b0a4-1c6cecbdb1f7)
+![image](https://github.com/user-attachments/assets/d97b08ed-7051-49b7-845e-d2b43eb7745a)
+
 
 ```
 sns.kdeplot(data=mart)
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/ac9da33d-c0e9-420e-9aec-bfc4beb4de48)
+![image](https://github.com/user-attachments/assets/78379500-4607-427b-88c4-26670a1b1fd9)
+
 
 ```
 sns.kdeplot(data=mart,x='PassengerId',hue='Survived',multiple='stack')
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/adb3024a-19a9-4aa4-a7ca-a9ae8dfe898d)
+![image](https://github.com/user-attachments/assets/67a1faa3-b88b-4fcd-9f84-9ddc61fafbaf)
+
 
 ```
 sns.kdeplot(data=mart,x='PassengerId',y='Survived')
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/8c866a9c-a44d-46dd-a77a-fab3c5439678)
+![image](https://github.com/user-attachments/assets/568c3779-877e-4770-9427-b0a49cde8b3a)
+
 
 ```
 data = np.random.randint(low = 1, high = 100, size = (10,10))
 hm=sns.heatmap(data=data,annot=True)
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/ca15b067-a509-45c5-98bf-dcdbccc89dea)
+![image](https://github.com/user-attachments/assets/e1a9639f-388c-49a3-a8fd-28cfb2179287)
 
 ```
 hm=sns.heatmap(data=data)
 ```
-![image](https://github.com/KayyuruTharani/EXNO-6-DS/assets/142209319/324a8ef9-1495-4c1c-baa2-3371f8732e87)
+![image](https://github.com/user-attachments/assets/0d0f9827-34da-48cb-8cde-bd9e69a014d5)
 
 
 # Result:
- Include your result here
+Thus, all the data visualization techniques of seaborn has been implemented.
